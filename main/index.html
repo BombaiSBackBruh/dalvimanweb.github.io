@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <style type="text/css" media="all">
+      body {
+         background: linear-gradient(0deg, #595959 0%, #ffffff 100%);
+         background-repeat: repeat-y;
+      }
+      
+      .navbar {
+         background: linear-gradient(0deg, #919191 0%, #3d3d3d 100%);
+         border: 3px solid #2C2C2C;
+         border-radius: 2px;
+         padding: 5px;
+         box-shadow: 5px 5px 0px 1px #000000;
+      }
+      
+      .download {
+         color: #17750D;
+         background-color: #2AA820;
+         border: 3px solid #143C08;
+         box-shadow: 5px -4px 0px 1px #000000;
+         cursor: pointer;
+      }
+      
+      .webtext {
+         color: #BC1EC4;
+         outline: 2px solid #5800FF;
+      }
+      
+      #blog {
+         background: linear-gradient(0deg, #0000ff 0%, #ffffff 100%);
+         border: 3px solid #001C51;
+         cursor: pointer;
+      }
+      
+      .doctext {
+         border: 2px solid #1092C6;
+         margin: 0;
+         text-align: center;
+         color: #212121;
+      }
+      
+      #userTemp {
+         background-color: #482545;
+         color: white;
+         border: 5px solid #B000A9;
+      }
+      
+      #userTemp1 {
+         background-color: #482545;
+         color: white;
+         border: 5px solid #B000A9;
+      }
+
+      #userTemp2 {
+         background-color: #482545;
+         color: white;
+         border: 5px solid #B000A9;
+      }
+      
+      #submitBtn {
+         background: linear-gradient(0deg, #000000 0%, #00ff00 100%);
+         border: 4px solid #2F8E2B;
+         color: #072100;
+         padding: 10px;
+         cursor: pointer;
+      }
+      
+      .container {
+         background: linear-gradient(0deg, #00eeff 0%, #000000 100%);
+         padding: 8px;
+         border: 3px solid #2C486A;
+      }
+      
+      .container1 {
+         padding: 10px;
+         background-color: #3D3D3D;
+         border: 5px solid #1D1D1D;
+      }
+      
+      .container2{
+         background-color: #161616;
+         border: 3px solid #131313;
+         color: #E1E1E1;
+         padding: 20px;
+      }
+      
+      #submitEmail {
+         background: linear-gradient(0deg, #00ff00 0%, #000000 48%, #41b300 56%, #000000 100%);
+         border: 4px solid #1B7607;
+         color: white;
+         border-radius: 1px;
+         cursor: pointer;
+         padding: 3px;
+      }
+      
+      iframe {
+         width: auto;
+      }
+      
+      .news {
+         background: linear-gradient(0deg, #ff0000 0%, #820000 49%, #000000 100%);
+         padding: 20px;
+         color: #3E0000
+      }
+      
+      .rulesText {
+         text-align: center;
+      }
+      
+      marquee {
+         background-color: #DC0D11;
+         color: #F1F1F1;
+      }
+      
+      #baldiTalk {
+         filter: blur(2px);
+         filter: drop-shadow(5px 5px 10px #000000);
+         image-rendering: pixelated;
+      }
+      
+      .chatContainer {
+         padding: 8px;
+         background-color: #323232;
+         border: 5px solid #131313;
+      }
+      
+      #blogpostChat {
+         background-color: #838383;
+         border: 2px solid #D5D5D5;
+      }
+      
+      .submitBlogpostButton {
+         background-color: #EFEFEF;
+         cursor: pointer;
+      }
+      
+      .archiveText {
+          text-align: center;
+          background-color: #F5CF6B;
+          border: 4px solid #B58C1F;
+          border-radius: 5px;
+          color: #FFF5D3;
+      }
+   </style>
+</head>
+<body>
+    <div class="archiveText">
+        <p>THIS WEBSITE HAS BEEN ARCHIVED,YOU CANNOT DO MANY THING AS NOW...</p>
+    </div>
+   <div class="navbar">
+      <span class="download" id="download">DOWNLOAD</span>
+      <span class="webtext">DALVI SCHOOLHOUSE</span>
+   </div>
+   <button id="blog">ARTICLE(COMING SOON..)</button>
+   
+   <h4 class="doctext" id="documentText">Hello,Welcome to my website</h4>
+   <img id="baldiTalk" src="Baldi_Talk.gif" alt="" style="" />
+   <marquee behavior="" direction="">HAVE FUN!</marquee>
+   
+   <p id="demo"></p>
+   
+   <!-- <iframe src="https://youtu.be/8sCMm4qeP_I?si=84RsWybY7CehC6RR" frameborder="0"></iframe> -->
+   
+   <!-- <img src="note.png" alt="" /> -->
+   
+   <form class="container">
+      <input type="text" name="tempUsername" id="userTemp" value="" placeholder="Local account login =>" required="" />
+      <input type="password" name="tempPassword" id="userTemp1" value="" placeholder="Local password login =>" required="" />
+      <button type="submit" id="submitBtn">SUBMIT ACCOUNT LOG IN</button>
+   </form>
+   
+   <div class="container1" id="userSetting">
+      <button id="logout">LOGOUT</button>
+      <p id="lastTime"><p id="lastTime1"><p id="lastTime2"></p></p></p>
+      <p id="userID"></p>
+   </div>
+   
+   <div class="news">
+      <p class="websiteShutdown">WEBSITE SHUTDOWN AT 2018/05/12!</p>
+   </div>
+   
+   <div class="container2">
+      <img src="Logo.png" alt="" style="background-color: #A7A7A7; image-rendering: pixelated;" />
+      <p>(©) RareGameWare Studios 1995 - 2009 All rights reserved </p>
+      <p>This website is maintained by [][][][][][][][][][][][][][][][][][][]</p>
+      <form method="post" accept-charset="utf-8">
+         <input type="email" name="emailNewsletter" id="userTemp2" value="" placeholder="Newsletter email" />
+         <button type="submit" id="submitEmail">SUBMIT</button>
+      </form>   
+      <span class="rules">
+         <h1 class="rulesText">RULES!!!</h1>
+         <p>100+ Reply = 1 DalCoins</p>
+         <p>10 Report = Temporary Delete</p>
+         <p>100+ Report = Permanent Delete + BANS</p>
+      </span>
+      
+      <h1 class="rulesText" id="ignoreThat">LOGIN TO GET BLOGPOST!!</h1>
+      <h5 style="text-align: center;" id="popularBlog">=== ALL OF MANY BLOGPOST ===</h5>
+   </div>
+   
+   <iframe src="blogpost.html" frameborder="0"></iframe>
+   <iframe src="blogpostNew.html" frameborder="0"></iframe>
+   <iframe src="blogpostNewNew.html" frameborder="0"></iframe>
+   <iframe src="blogpostNewNewNew.html" frameborder="0"></iframe>   
+   <iframe src="blogpostNewNewNewNew.html" frameborder="0"></iframe> 
+   
+   <div class="chatContainer">
+      <input type="text" name="blogpost" id="blogpostChat" placeholder="YOU NEED TO LOGIN FIRST" />
+      <button class="submitBlogpostButton" id="submitBlogpostButton1">SUBMIT</button>
+   </div>
+   
+   <?php
+      
+   ?>
+   
+   <script type="text/javascript" charset="utf-8">
+      setTimeout(function() {
+          eruda.destroy();
+      }, 1);
+      
+      let download = document.getElementById('download');
+      download.addEventListener("click", downloadButton);
+      
+      let userSetting = document.getElementById('userSetting').style.visibility = "hidden";
+      
+      // You know what 
+      
+      function downloadButton() {
+         const chances = Math.random();
+         location.replace("https://bombastudiossateams.itch.io/");
+         
+         if (chances < 0.5) {
+            location.replace("https://discord.gg/W5sFm93Cta");
+         }
+      }
+      
+      let submitBtn = document.getElementById('submitBtn');
+      submitBtn.addEventListener("click", submitLoginButton);
+      
+      function submitLoginButton() {
+         let userTemp = document.getElementById('userTemp');
+         let userTemp1 = document.getElementById('userTemp1');
+         userTemp.addEventListener("input", secretUser)
+         
+         function secretUser() {
+             if (userTemp.value == "Bomba") {
+                 window.alert(" CREATOR ");
+             }
+         }
+         
+         if (!userTemp.value && !userTemp1.value) {
+            window.alert("INVALID!");
+            let baldiTalk = document.getElementById('baldiTalk');
+            
+            baldiTalk.src = "Baldi_Frown.gif";
+         }
+         
+         else if (!userTemp1.value) {
+            window.alert("PASSWORD REQUIRED!");
+            baldiTalk.src = "Baldi_Frown.gif";
+         }
+         
+         else if (!userTemp.value) {
+            window.alert("USERNAME REQUIRED!");
+            baldiTalk.src = "Baldi_Frown.gif";
+         }
+         
+         else {
+            baldiTalk.remove();
+            text = "Hello!";
+            
+            ignoreThat.remove();
+            
+            window.alert("SUBMITTED!");
+            userTemp.value = "";
+            userTemp1.value = "";
+            
+            userTemp.remove();
+            userTemp1.remove();
+            submitBtn.remove();
+            
+            let documentText = document.getElementById('documentText').innerHTML = text;
+            let userSetting = document.getElementById('userSetting').style.visibility = "visible";
+            
+            userID.innerHTML = "USER ID : " + Math.random(Math.random() * Math.random()) / 9 + 99;
+            
+            const lastTimeJoined = new Date();
+            let dateTime = lastTimeJoined.getDate();
+            let dateDay = lastTimeJoined.getMonth();
+            let dateMonth = lastTimeJoined.getFullYear();
+            document.getElementById('lastTime').innerHTML = dateTime;
+            document.getElementById('lastTime1').innerHTML = dateDay;
+            document.getElementById('lastTime2').innerHTML = dateMonth;
+         }
+      }
+      
+      let logout = document.getElementById('logout');
+      logout.addEventListener("click", logoutButton);
+      
+      function logoutButton() {
+         location.reload();
+      }
+      
+      let userTemp2 = document.getElementById('userTemp2');
+      let submitEmail = document.getElementById('submitEmail');
+      submitEmail.addEventListener("click", submitButtonEmail);
+      
+      function submitButtonEmail() {
+         if (!userTemp2.value) {
+            window.alert("INVALID!");
+         }
+         
+         else {
+            window.alert("Thanks you for your email");
+            
+            sendEmail();
+         }
+      }
+      
+      function sendEmail() {
+         Email.send({
+            Host: "smtp.gmail.com",
+            Username: "dalviSchoolhouse@gmail.com",
+            Password: "2567726Jhshs7",
+            To: userTemp2.value,
+            From: "dalviSchoolhouse@gmail.com",
+            Subject: "Thanks fhor sending your email",
+            Body: "BYEEHA",
+         })
+         .then(function(message) {
+            console.log(message);
+         });
+      }
+      
+      let submitBlogpostButton1 = document.getElementById('submitBlogpostButton1');
+      submitBlogpostButton1 = addEventListener("click", submitBlogpostSecret);
+      
+      function submitBlogpostSecret() {
+          let blogpostChat = document.getElementById('blogpostChat');
+          blogpostChat.addEventListener("input", illegalCode);
+      }
+      
+      function illegalCode() {
+          if (blogpostChat.value == "secret") {
+              location.replace("Secret.html");
+          }
+          
+          else if (blogpostChat.value == "article") {
+              location.replace("https://youtu.be/_r7yKaDxGvc?si=74ycWDhwpcQihC2W");
+          }
+      }
+      
+      // Nevermind :v
+      
+      
+      
+   </script>
+</body>
+</html>
